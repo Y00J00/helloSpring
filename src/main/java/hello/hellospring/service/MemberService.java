@@ -10,14 +10,13 @@ import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 
-@Service
+
 public class MemberService {
     // private final MemberRepository memberRepository = new MemoryMemberRepository();
 
     private final MemberRepository memberRepository;
 
     // memberRepository를 직접 new 해서 생성하는게 아닌 외부에서 넣어주게끔 바꾼다
-    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
